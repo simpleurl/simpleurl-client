@@ -66,7 +66,7 @@ export function BackgroundBeams({ className = '' }: BackgroundDotsProps) {
   return (
     <canvas
       ref={canvasRef}
-      className={`fixed inset-0 z-0 bg-black ${className}`}
+      className={`fixed inset-0 -z-10 bg-black ${className}`}
       style={{ width: '100%', height: '100%' }}
       aria-hidden="true"
     />
