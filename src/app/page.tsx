@@ -1,12 +1,11 @@
 import Features from '@/components/features';
 import { BackgroundBeams } from '@/components/ui/background-beams';
 import UrlInputForm from '@/components/url-input-form';
-import { createRootRoute, Link } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/router-devtools';
+import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
 
-export const Route = createRootRoute({
-  component: () => (
+const HomePage = () => {
+  return (
     <>
       <div className="flex font-poppins h-svh flex-col max-w-4xl mx-auto justify-between">
         <section className="  px-4 py-20">
@@ -25,13 +24,14 @@ export const Route = createRootRoute({
           <span className="md:text-base text-sm">
             SimpleUrl &copy; {new Date().getFullYear()}
           </span>
-          <Link to="/">
+          <Link href="/">
             <FaGithub size={16} />
           </Link>
         </footer>
       </div>
       <BackgroundBeams />
-      <TanStackRouterDevtools />
     </>
-  ),
-});
+  );
+};
+
+export default HomePage;
